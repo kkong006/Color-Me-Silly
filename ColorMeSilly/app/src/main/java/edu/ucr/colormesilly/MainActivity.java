@@ -1,7 +1,6 @@
 package edu.ucr.colormesilly;
 
 import android.graphics.Color;
-import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -12,14 +11,10 @@ import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
-    private boolean set_bk;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        set_bk = false;
 
         Button click_bt = (Button) findViewById(R.id.change_color_bt);
         click_bt.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
@@ -36,6 +31,5 @@ public class MainActivity extends AppCompatActivity {
                 bt.setBackgroundColor(color);
             }
         });
-
     }
 }
